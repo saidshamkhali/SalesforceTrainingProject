@@ -1,4 +1,4 @@
-trigger CreateAccountLead on Lead(after insert, after update){
+trigger CreateAccountLead on Lead(after insert){
       if (Trigger.isInsert){
             List<Account> accs= new List<Account>();
             for(Lead ld:Trigger.New){
